@@ -6,14 +6,14 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:36:07 by junheeki          #+#    #+#             */
-/*   Updated: 2022/10/28 11:51:00 by junheeki         ###   ########.fr       */
+/*   Updated: 2022/11/01 15:36:57 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t *ft_strlcpy(char *dst, const char *src, size_t dstsize)
-{
+size_t *ft_strlcpy(char *dst, const char *src, size_t size);
+/*{
   size_t  i;
   size_t  tmp;
 
@@ -21,12 +21,12 @@ size_t *ft_strlcpy(char *dst, const char *src, size_t dstsize)
   tmp = ft_strlen(src);
   if (!dst || !src)
     return (0);
-  while (i < tmp && i + 1 < dstsize)
+  while (i < tmp && i + 1 < size)
   {
     dst[i] = src[i];
     ++i;
   }
-  if (dstsize > 0)
+  if (size > 0)
     dst[i] = '\0';
   return (tmp);
-}
+}*/

@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 14:20:04 by junheeki          #+#    #+#             */
-/*   Updated: 2022/10/27 16:07:55 by junheeki         ###   ########.fr       */
+/*   Updated: 2022/11/01 16:16:19 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,4 @@ int	ft_atoi(char *str)
 		str++;
 	}
 	return (res * sign);
-}
-
-int main(void)
-{
-    printf("Real atoi: %d\n", atoi("-999999999999999"));
-    printf("My atoi: %d\n", ft_atoi("-999999999999999"));
-    return 0;
 }
