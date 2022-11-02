@@ -29,6 +29,7 @@ int		ft_isprint(int c);
 void	*ft_memchr(const void *ptr, int ch, size_t count);
 void	*ft_memcpy(void *dest, const void *src, size_t num);
 void	*ft_memcpy(void *dest, const void *src, size_t num);
+int		ft_memcmp(const void *s1, const void *s2, size_t num);
 void	*ft_memmove(void *dest, const void *src, size_t num);
 void	*ft_memset(void *ptr, int value, size_t num);
 char	*ft_strchr(const char *str, int ch);
