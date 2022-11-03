@@ -6,27 +6,38 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:35:40 by junheeki          #+#    #+#             */
-/*   Updated: 2022/11/02 17:20:14 by junheeki         ###   ########.fr       */
+/*   Updated: 2022/10/28 16:49:16 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t num)
-/* s1 is dst, s2 is src*/
+int ft_memcmp(const void *lhs, const void *rhs, size_t count)
 {
-	size_t	i;
-	unsigned char	*tmp1;
-	unsigned char	*tmp2;
+    int r;
+    int i = 0;
+    while(i != count && ((unsigned char*)lhs)[i] == ((unsigned char*)rhs)[i])
+    {
+        ++i;
+    }
+    
+    if (i == count)
+        r = 0;    
+    else if (((unsigned char*)lhs)[i] > ((unsigned char*)rhs)[i])
+        r = 1;
+    else if (((unsigned char*)lhs)[i] < ((unsigned char*)rhs)[i])
+        r = -1;
 
-	i = 0;
-	tmp1 = (unsigned char *)s1;
-	tmp2 = (unsigned char *)s2;
-	while (i < num)
-	{
-		if (tmp1[i] != tmp2[i])
-			return (tmp1[i] - tmp2[i]);
-		i++;
-	}
-	return (0);
+    return (r);
+}
+
+int main(void)
+{
+    unsigned char buff1[3] = {1, 2, 3};
+    unsigned char buff2[3] = {1, 2, 3}; 
+
+    int r = ft_memcmp(buff1, buff2 , 3);
+    printf("%d", r);
+
+    return (0);
 }

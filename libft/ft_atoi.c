@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 14:20:04 by junheeki          #+#    #+#             */
-/*   Updated: 2022/11/02 18:50:24 by junheeki         ###   ########.fr       */
+/*   Updated: 2022/10/27 16:07:55 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(char *str)
 {
-	unsigned long	res;
+	int	res;
 	int	sign;
 
 	res = 0;
@@ -29,10 +29,13 @@ int	ft_atoi(char *str)
 	{
 		res = res * 10 + *str - '0';
 		str++;
-		if (res > 2147483648 && sign == -1)
-			return (0);
-		else if (res > 2147483647 && sign == 1)
-			return (-1);
 	}
-	return ((int)(res * sign));
+	return (res * sign);
+}
+
+int main(void)
+{
+    printf("Real atoi: %d\n", atoi("-999999999999999"));
+    printf("My atoi: %d\n", ft_atoi("-999999999999999"));
+    return 0;
 }

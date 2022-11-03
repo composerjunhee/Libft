@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 11:28:29 by junheeki          #+#    #+#             */
-/*   Updated: 2022/10/28 11:28:34 by junheeki         ###   ########.fr       */
+/*   Updated: 2022/10/31 18:19:59 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,20 @@ int main(void)
   ft_strcpy(buf, string);
 
   printf("%s", buf);
+}
+
+char *strcpy(char *dst, const char *src)
+{
+   size_t i = 0;
+
+   while (src[i] != '\0')
+   {
+    dst[i] = src[i];
+    ++i;
+   }
+
+   dst[i] = '\0';
+
+   return (dst);
+   
 }

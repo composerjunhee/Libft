@@ -6,14 +6,19 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 14:29:58 by junheeki          #+#    #+#             */
-/*   Updated: 2022/11/01 16:28:38 by junheeki         ###   ########.fr       */
+/*   Updated: 2022/10/31 18:39:20 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void ft_bzero(void *s, size_t n)
 {
-	if (n != 0)
-		ft_memset(s, 0, n);
+  char *c = s;
+  size_t i;
+  i = 0;
+
+  while (i < n)
+    i++;
+  c[i] = '\0';
 }

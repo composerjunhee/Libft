@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 15:33:39 by junheeki          #+#    #+#             */
-/*   Updated: 2022/10/28 15:47:00 by junheeki         ###   ########.fr       */
+/*   Updated: 2022/10/31 18:30:51 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@
 
 char *ft_strncpy(char *dest, const char *src, size_t num)
 {
-    size_t i = 0;
+    size_t i;
+    i = 0;
 
-    for (i=0; i < num; ++i)
+    while (i < num)
     {
         dest[i] = src[i];
+        i++;
 
         if (src[i] == '\0')
         {
@@ -36,6 +38,7 @@ int main(void)
     char *hello = "hello world";
 
     ft_strncpy(str, hello, 7);
+    str[7] = '\0';
 
     printf("%s", str);
     
