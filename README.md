@@ -1,8 +1,8 @@
-**Libft**
+# **Libft**
 
 Libft is a C library of functions that I have created for use in various projects. This is my first project in the 42 curriculum, and I will continue to add, adjust, and improve functions as needed.
 
-Functions
+## Functions
 The library includes the following libc functions:
 
 * 'ft_isalpha'
@@ -29,7 +29,7 @@ The library includes the following libc functions:
 * 'ft_calloc'
 * 'ft_strdup'
 
-In addition, the library includes the following non-standard functions:
+## In addition, the library includes the following non-standard functions:
 
 * 'ft_substr'
 * 'ft_strjoin'
@@ -43,7 +43,7 @@ In addition, the library includes the following non-standard functions:
 * 'ft_putendl_fd'
 * 'ft_putnbr_fd'
 
-Bonus Functions
+## Bonus Functions
 The library also includes the following bonus functions:
 
 * 'ft_lstnew'
